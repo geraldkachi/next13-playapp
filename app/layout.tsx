@@ -15,6 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://stijndv.com" />
+        <link rel="stylesheet" href="https://stijndv.com/fonts/Eudoxus-Sans.css" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
