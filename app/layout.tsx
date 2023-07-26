@@ -23,3 +23,10 @@ export default function RootLayout({
     </html>
   )
 }
+// with, toSorted, toRevered, splice,
+
+// ls -la
+// meaning lsit everything is the file directory including the hidden files
+// .  meanis period
+// git reset HEAD~1   // this would point to the last commit in git to undo a commit
+// {date && format(new Date(), "do MMMM yyyy, hh:mm a")}

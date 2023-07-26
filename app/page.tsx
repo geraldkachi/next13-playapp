@@ -1,9 +1,10 @@
 // import Image from 'next/image'
+import { NextPage } from 'next';
 import { Footer, Navbar } from '../components';
 import { About, Explore, Feedback, GetStarted, Hero, Insights, WhatsNew, World } from '../sections';
 
 
-export default function Home() {
+ const Home: NextPage = () => {
  return  (
   <div className="bg-primary-black overflow-hidden">
     <Navbar />
@@ -28,7 +29,7 @@ export default function Home() {
   </div>
 );
 }
-
+export default Home
 
 
 // return (
