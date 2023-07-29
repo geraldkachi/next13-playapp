@@ -1,0 +1,16 @@
+.top-btn-position {
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+}
+
+.top-btn-style {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    /* background-color: #fff; */
+    background-color: #065373;
+    cursor: pointer;
+    color: #333;
+    text-align: center;
+}
