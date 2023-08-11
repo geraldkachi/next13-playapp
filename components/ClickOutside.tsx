@@ -20,7 +20,7 @@ export default function useClickOutside<T extends HTMLElement>(
 		return () => {
 			document.removeEventListener('mousedown', handleClickOutside);
 		};
-	}, [ref]);
+	}, [ref, handler]);
 }
 
 export function ClickOutside(

@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import { baseUrl } from '../constants/movie'
+import { baseUrl } from '@/constants/movies'
 import { Movie } from '../typings'
 import { FaPlay } from 'react-icons/fa'
 import { InformationCircleIcon } from '@heroicons/react/solid'
 import { useRecoilState } from 'recoil'
-import { modalState, movieState } from '../atoms/modalAtom'
+import { modalState, movieState } from '@/modalAtom'
 
 interface Props {
   netflixOriginals: Movie[]
@@ -29,6 +29,7 @@ function Banner({ netflixOriginals }: Props) {
           src={`${baseUrl}${movie?.backdrop_path || movie?.poster_path}`}
           layout="fill"
           objectFit="cover"
+          alt='baseUrl'
         />
       </div>
 
