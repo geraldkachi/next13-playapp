@@ -1,4 +1,3 @@
-import { CheckIcon } from '@heroicons/react/outline'
 import { Product } from '@stripe/firestore-stripe-payments'
 
 interface Props {
@@ -72,7 +71,8 @@ function Table({ products, selectedPlan }: Props) {
               key={product.id}
             >
               {product.metadata.portability === 'true' && (
-                <CheckIcon className="inline-block h-8 w-8" />
+                // <CheckIcon className="inline-block h-8 w-8" />
+                "CheckIocn"
               )}
             </td>
           ))}

@@ -1,7 +1,7 @@
 "use client"
 import Head from 'next/head'
 import Link from 'next/link'
-import { GetStaticProps } from 'next'
+// import { GetStaticProps } from 'next'
 import Image from 'next/image'
 
 import payments from '@/lib/stripe'
@@ -9,12 +9,14 @@ import useAuth from '@/hooks/useAuth'
 import Membership from '@/components/Membership'
 import useSubscription from '@/hooks/useSubscription'
 import { getProducts, Product } from '@stripe/firestore-stripe-payments'
+import { GetStaticProps, InferGetStaticPropsType } from 'next'
 
-interface Props {
-  products: Product[]
-}
+// interface Props {
+//   products: Product[]
+// }
 
-function Account({ products }: Props) {
+// function Account({ products }: Props) {
+function Account() {
   // console.log(products)
   const { user, logout } = useAuth()
   const subscription = useSubscription(user)
@@ -29,7 +31,8 @@ function Account({ products }: Props) {
       <header className={`bg-[#141414]`}>
         <Link href="/">
           <Image
-            src="https://rb.gy/ulxxee"
+            // src="https://rb.gy/ulxxee"
+            src="/headset.svg"
             width={120}
             height={120}
             className="cursor-pointer object-contain"
@@ -38,11 +41,12 @@ function Account({ products }: Props) {
         </Link>
         <Link href="/account">
           <Image
-            src="https://rb.gy/g1pwyx"
+            src="/headset.svg"
+            // src="https://rb.gy/g1pwyx"
             alt=""
             className="cursor-pointer rounded"
-            width={undefined}
-            height={undefined}
+            width={20}
+            height={20}
           />
         </Link>
       </header>
@@ -51,7 +55,10 @@ function Account({ products }: Props) {
         <div className="flex flex-col gap-x-4 md:flex-row md:items-center">
           <h1 className="text-3xl md:text-4xl">Account</h1>
           <div className="-ml-0.5 flex items-center gap-x-1.5">
-            <Image src="https://rb.gy/4vfk4r" alt="" className="h-7 w-7" />
+            <Image
+              src="/headset.svg"
+              // src="https://rb.gy/4vfk4r"
+              alt="" className="h-7 w-7" width={20} height={20} />
             <p className="text-xs font-semibold text-[#555]">
               Member since {subscription?.created}
             </p>
@@ -64,11 +71,12 @@ function Account({ products }: Props) {
           <h4 className="text-lg text-[gray]">Plan Details</h4>
           {/* Find the current plan */}
           <div className="col-span-2 font-medium">
-            {
-              products.filter(
+
+            {/* {products?.length === 0 ? null :
+              products?.filter(
                 (product) => product.id === subscription?.product
               )[0]?.name
-            }
+            } */}
           </div>
           <p className="cursor-pointer text-blue-500 hover:underline md:text-right">
             Change plan
@@ -91,7 +99,7 @@ function Account({ products }: Props) {
 
 export default Account
 
-// export const getStaticProps: GetStaticProps = async () => {
+// const getStaticProps: GetStaticProps = async () => {
 //   const products = await getProducts(payments, {
 //     includePrices: true,
 //     activeOnly: true,
@@ -104,4 +112,10 @@ export default Account
 //       products,
 //     },
 //   }
+// }
+
+// export function Page({
+//   repo,
+// }: InferGetStaticPropsType<typeof getStaticProps>) {
+//   return repo.stargazers_count
 // }

@@ -79,6 +79,10 @@ const Home = ({
   )
 }
 
+Home.getInitialProps = async (ctx: any) => {
+  return {}
+}
+
 export default Home
 
 // export const getServerSideProps = async () => {

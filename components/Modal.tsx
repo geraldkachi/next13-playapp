@@ -1,14 +1,13 @@
 "use client"
-import {
-  CheckIcon,
-  PlusIcon,
-  ThumbUpIcon,
-  VolumeOffIcon,
-  XIcon,
-  //@ts-ignore
-} from '@heroicons/react/outline'
-//@ts-ignore
-import { VolumeUpIcon } from '@heroicons/react/solid'
+// import {
+//   CheckIcon,
+//   PlusIcon,
+//   ThumbUpIcon,
+//   VolumeOffIcon,
+//   XIcon,
+// } from '@heroicons/react/outline'
+// //@ts-ignore
+// import { VolumeUpIcon } from '@heroicons/react/solid'
 import MuiModal from '@mui/material/Modal'
 import {
   collection,
@@ -140,7 +139,8 @@ function Modal() {
           onClick={handleClose}
           className="modalButton absolute right-5 top-5 !z-40 h-9 w-9 border-none bg-[#181818] hover:bg-[#181818]"
         >
-          <XIcon className="h-6 w-6" />
+          {/* <XIcon className="h-6 w-6" /> */}
+          Icon
         </button>
 
         <div className="relative pt-[56.25%]">
@@ -163,21 +163,26 @@ function Modal() {
 
               <button className="modalButton" onClick={handleList}>
                 {addedToList ? (
-                  <CheckIcon className="h-7 w-7" />
+                  // <CheckIcon className="h-7 w-7" />
+                  'check iocn'
                 ) : (
-                  <PlusIcon className="h-7 w-7" />
+                  // <PlusIcon className="h-7 w-7" />
+                    "+"
                 )}
               </button>
 
               <button className="modalButton">
-                <ThumbUpIcon className="h-7 w-7" />
+                {/* <ThumbUpIcon className="h-7 w-7" /> */}
+                👍
               </button>
             </div>
             <button className="modalButton" onClick={() => setMuted(!muted)}>
               {muted ? (
-                <VolumeOffIcon className="h-6 w-6" />
+                // <VolumeOffIcon className="h-6 w-6" />
+                ">"
               ) : (
-                <VolumeUpIcon className="h-6 w-6" />
+                // <VolumeUpIcon className="h-6 w-6" />
+                  "<"
               )}
             </button>
           </div>
@@ -224,3 +229,4 @@ function Modal() {
 }
 
 export default Modal
+// 176:17  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
