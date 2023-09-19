@@ -1,9 +1,12 @@
+"use client"
 import useAuth from '@/hooks/useAuth'
-import { BellIcon, SearchIcon } from '@heroicons/react/solid'
-import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 // import useAuth from '../hooks/useAuth'
 import BasicMenu from './BasicMenu'
+//@ts-ignore
+import { BellIcon, SearchIcon } from '@heroicons/react/solid'
+import Image from 'next/image'
 
 function Header() {
   const { logout } = useAuth()
@@ -28,7 +31,8 @@ function Header() {
   return (
     <header className={`${isScrolled && 'bg-[#141414]'}`}>
       <div className="flex items-center space-x-2 md:space-x-10">
-        <img
+        <Image
+          alt=''
           src="https://rb.gy/ulxxee"
           width={100}
           height={100}
@@ -51,10 +55,11 @@ function Header() {
         <p className="hidden lg:inline">Kids</p>
         <BellIcon className="h-6 w-6" />
         <Link href="/account">
-          <img
+          <Image
             src="https://rb.gy/g1pwyx"
             alt=""
             className="cursor-pointer rounded"
+            width={undefined}
           />
         </Link>
       </div>

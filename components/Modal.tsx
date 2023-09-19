@@ -1,10 +1,13 @@
+"use client"
 import {
   CheckIcon,
   PlusIcon,
   ThumbUpIcon,
   VolumeOffIcon,
   XIcon,
+  //@ts-ignore
 } from '@heroicons/react/outline'
+//@ts-ignore
 import { VolumeUpIcon } from '@heroicons/react/solid'
 import MuiModal from '@mui/material/Modal'
 import {
@@ -18,7 +21,7 @@ import {
 import { useEffect, useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast'
 import { FaPlay } from 'react-icons/fa'
-import ReactPlayer from 'react-player/lazy'
+// import ReactPlayer from 'react-player/lazy'
 import { useRecoilState } from 'recoil'
 import { modalState, movieState } from '@/modalAtom'
 import { db } from '../firebase'
@@ -69,7 +72,7 @@ function Modal() {
     }
 
     fetchMovie()
-  }, [movie])
+  }, [movie, user])
 
   // Find all the movies in the user's list
   useEffect(() => {

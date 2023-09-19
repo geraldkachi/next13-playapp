@@ -1,12 +1,12 @@
 "use client";
-
+import Link from "next/link";
+import Image from "next/image";
 import styles from "../styles";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { navVariants } from "../utils/motion";
 import { ClickOutside } from "./ClickOutside";
 import useWindowDimensions from "@/hooks/useWindowDimensionss";
-import Link from "next/link";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -23,9 +23,11 @@ const Navbar = () => {
       <div
         className={`${styles.innerWidth} mx-auto flex justify-between gap-8`}
       >
-        <img
+        <Image
           src="/search.svg"
           alt="search"
+          width={10}
+          height={10}
           className="w-[24px] h-[24px] object-contain"
         />
         <h2 className="font-extrabold text-[24px] leading-[30.24px] text-white">
@@ -33,8 +35,9 @@ const Navbar = () => {
         </h2>
         <div onClick={() => setNav(prev => !prev)}className="block text-white cursor-pointer relative">
           {nav ? (
-            <img src="/menu.svg" alt="menu" className="w-[24px] h-[24px] object-contain cursor-pointer" /> ) : (
-            <img src="/menu.svg" alt="menu" className="w-[24px] h-[24px] object-contain cursor-pointer" />
+            <Image src="/menu.svg" alt="menu" className="w-[24px] h-[24px] object-contain cursor-pointer" width={20} height={20} />)
+            : (
+            <Image src="/menu.svg" alt="menu" className="w-[24px] h-[24px] object-contain cursor-pointer" width={20} height={20} />
           )}
         <ClickOutside onclickoutside={() => setNav(false)} className={` text-black`} >
         {nav && <>
@@ -52,7 +55,8 @@ const Navbar = () => {
                 <span>Press Me</span>
               </span>
         </div>
-        </>}
+            </>
+            }
         </ClickOutside>
         </div>
 

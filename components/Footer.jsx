@@ -1,6 +1,6 @@
 'use client';
-
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { socials } from '../constants';
 
 import styles from '../styles';
@@ -20,10 +20,12 @@ const Footer = () => (
           Enter the Metaverse
         </h4>
         <button type="button" className="flex items-center h-fit py-4 px-6 bg-[#25618B] rounded-[32px] gap-[12px]">
-          <img
+          <Image
             src="/headset.svg"
             alt="headset"
             className="w-[24px] h-[24px] object-contain"
+            width={10}
+            height={10}
           />
           <span className="font-normal text-[16px] text-white">
             Enter Metaverse
@@ -44,7 +46,9 @@ const Footer = () => (
 
           <div className="flex gap-4">
             {socials.map((social) => (
-              <img
+              <Image
+                width={10}
+                height={10}
                 key={social.name}
                 src={social.url}
                 alt={social.name}

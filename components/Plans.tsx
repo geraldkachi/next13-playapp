@@ -1,6 +1,8 @@
+//@ts-ignore
 import { CheckIcon } from '@heroicons/react/outline'
 import { Product } from '@stripe/firestore-stripe-payments'
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import useAuth from '../hooks/useAuth'
@@ -33,7 +35,7 @@ function Plans({ products }: Props) {
 
       <header className="border-b border-white/10 bg-[#141414]">
         <Link href="/">
-          <img
+          <Image
             src="https://rb.gy/ulxxee"
             alt="Netflix"
             width={150}

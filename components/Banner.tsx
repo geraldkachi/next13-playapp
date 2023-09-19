@@ -1,8 +1,10 @@
+"use client"
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { baseUrl } from '@/constants/movies'
 import { Movie } from '../typings'
 import { FaPlay } from 'react-icons/fa'
+//@ts-ignore
 import { InformationCircleIcon } from '@heroicons/react/solid'
 import { useRecoilState } from 'recoil'
 import { modalState, movieState } from '@/modalAtom'

@@ -1,6 +1,6 @@
 "use client";
 import Head from 'next/head'
-// import Image from 'next/image'
+import Image from 'next/image'
 import { useState } from 'react'
 import useAuth from '@/hooks/useAuth'
 import { SubmitHandler, useForm } from 'react-hook-form'
@@ -35,7 +35,7 @@ function Login() {
         <title>Netflix</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <img
+      <Image
         src="https://rb.gy/p2hphi"
         // layout="fill"
         className="-z-10 !hidden opacity-60 sm:!inline object-cover"
@@ -45,11 +45,12 @@ function Login() {
         alt="lolo"
       />
 
-      <img
+      <Image
         src="https://rb.gy/ulxxee"
         className="absolute left-4 top-4 cursor-pointer object-contain md:left-10 md:top-6"
         width={150}
         height={150}
+        alt="true"
       />
 
       <form
