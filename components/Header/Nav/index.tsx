@@ -37,29 +37,25 @@ export default function index() {
       animate="enter"
       exit="exit"
       className={styles.menu}
-      >
-       <div className={styles.body}>
-            <div onMouseLeave={() => {setSelectedIndicator(pathname)}} className={styles.nav}>
-                    <div className={styles.header}>
-                        <p>Navigation</p>
-                    </div>
-                    {
-                      navItems.map( (data, index) => {
-                        return <Link
-                        key={index}
-                        data={{...data, index}}
-                        isActive={selectedIndicator == data.href}
-                        setSelectedIndicator={setSelectedIndicator}>
-                        </Link>
-                      })
-                    }
-            </div>
-            <div className={styles.footer}>
-                <a>Awwwards</a>
-                <a>Instagram</a>
-                <a>Dribble</a>
-                <a>LinkedIn</a>
-            </div>
+    >
+      <div className={styles.body}>
+        <div onMouseLeave={() => { setSelectedIndicator(pathname) }} className={styles.nav}>
+          <div className={styles.header}>
+            <p>Navigation</p>
+          </div>
+          {navItems.map((data, index) => {
+            return <Link key={index} data={{ ...data, index }}
+              isActive={selectedIndicator == data.href}
+              setSelectedIndicator={setSelectedIndicator}>
+            </Link>
+          })}
+        </div>
+        <div className={styles.footer}>
+          <a>Awwwards</a>
+          <a>Instagram</a>
+          <a>Dribble</a>
+          <a>LinkedIn</a>
+        </div>
       </div>
       <Curve />
     </motion.div>
