@@ -1,7 +1,7 @@
 import styles from './style.module.scss';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { slide, scale } from '../Header/amin';
+import { slide, scale } from '../../amin';
 
 export default function Index({data, isActive, setSelectedIndicator}: any) {
 

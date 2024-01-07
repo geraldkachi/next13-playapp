@@ -2,7 +2,7 @@
 import styles from './style.module.scss'
 import { useState } from "react";
 import { AnimatePresence } from 'framer-motion';
-import Nav from '../../components/Nav'
+import Nav from '../../components/Header/Nav'
 
 const Page = () => {
   const [isActive, setIsActive] = useState(false);
@@ -15,9 +15,7 @@ const Page = () => {
           <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}></div>
         </div>
         <AnimatePresence mode="wait">
-
           {isActive && <Nav />}
-
         </AnimatePresence>
       </>
     </div>
