@@ -30,7 +30,7 @@ import { About, Explore, Feedback, GetStarted, Hero, Insights, WhatsNew, World }
 );
 }
 export default Home
-
+// https://codesandbox.io/s/infallible-tu-sbtvfs?file=/src/App.js
 
 // return (
 //   <main className="flex min-h-screen flex-col items-center justify-between p-24">

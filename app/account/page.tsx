@@ -119,3 +119,6 @@ export default Account
 // }: InferGetStaticPropsType<typeof getStaticProps>) {
 //   return repo.stargazers_count
 // }
+
+
+// checkout cooper codes for next js 13
