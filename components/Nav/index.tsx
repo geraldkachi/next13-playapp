@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { menuSlide } from '../Header/amin';
 import Link from './../Link';
+import Curve from './../Curve';
 
 const navItems = [
   {
@@ -59,7 +60,8 @@ export default function index() {
                 <a>Dribble</a>
                 <a>LinkedIn</a>
             </div>
-        </div>
+      </div>
+      <Curve />
     </motion.div>
   )
 }
