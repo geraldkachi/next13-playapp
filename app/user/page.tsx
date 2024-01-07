@@ -2,6 +2,7 @@
 import styles from './style.module.scss'
 import { useState } from "react";
 import { AnimatePresence } from 'framer-motion';
+import Nav from '../../components/Nav'
 
 const Page = () => {
   const [isActive, setIsActive] = useState(false);
